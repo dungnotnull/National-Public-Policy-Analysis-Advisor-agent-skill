@@ -1,0 +1,236 @@
+{
+  "template_type": "policy_cycle_analysis",
+  "version": "1.0",
+  "description": "Structured template for policy cycle stage analysis",
+  "metadata": {
+    "created": "2026-08-04",
+    "framework": "Lasswell Decision Process + Jann & Wegrich Policy Cycle",
+    "output_format": "structured_json"
+  },
+  "structure": {
+    "policy_issue": {
+      "issue_title": "Brief title for the policy issue",
+      "country_context": "Country or jurisdiction",
+      "policy_domain": "Sector or domain of policy",
+      "analysis_focus": "Specific focus of cycle analysis"
+    },
+    "current_stage": {
+      "stage": "agenda_setting/formulation/decision/implementation/evaluation",
+      "stage_description": "What is happening at this stage",
+      "duration_in_stage": "How long in this stage",
+      "progress_indicators": ["Indicators of progress through this stage"]
+    },
+    "stage_analysis": {
+      "agenda_setting": {
+        "how_on_agenda": {
+          "focusing_events": ["Events that brought attention to the issue"],
+          "indicators": ["Statistical or data indicators"],
+          "feedback": ["Feedback from existing policies"],
+          "advocacy": ["Advocacy efforts that elevated the issue"]
+        },
+        "agenda_status": {
+          "systemic_agenda": "Is it on society's agenda?",
+          "institutional_agenda": "Is it on government's agenda?",
+          "decision_agenda": "Is it up for active decision?"
+        },
+        "agenda_dynamics": {
+          "what_pushed_it_on": "What put this issue on agenda",
+          "what_keeps_it_on": "What maintains agenda status",
+          "what_could_push_it_off": "What could remove it from agenda",
+          "competing_issues": ["Competing agenda items"]
+        }
+      },
+      "formulation": {
+        "who_involved": {
+          "policy_communities": ["Policy communities involved"],
+          "policy_entrepreneurs": ["Key policy entrepreneurs"],
+          "bureaucracies": ["Bureaucracies involved"],
+          "external_experts": ["External experts consulted"]
+        },
+        "process": {
+          "problem_definition": "How problem is being defined",
+          "alternatives_considered": ["Policy alternatives under consideration"],
+          "evidence_used": ["Types of evidence informing formulation"],
+          "consultation": ["Stakeholder consultation processes"],
+          "drafting": ["How proposals are being drafted"]
+        },
+        "constraints": {
+          "political_constraints": ["Political limits on formulation"],
+          "economic_constraints": ["Economic limits on formulation"],
+          "technical_constraints": ["Technical limits on formulation"],
+          "institutional_constraints": ["Institutional limits on formulation"]
+        }
+      },
+      "decision": {
+        "venue": {
+          "decision_makers": "Who makes the decision",
+          "decision_body": "What body makes the decision",
+          "decision_rule": "What rule applies (majority, veto, etc.)"
+        },
+        "decision_criteria": {
+          "political_viability": "Assessment of political viability",
+          "technical_feasibility": "Assessment of technical feasibility",
+          "economic_efficiency": "Assessment of economic efficiency",
+          "public_support": "Assessment of public support",
+          "stakeholder_support": "Assessment of stakeholder support"
+        },
+        "coalition_needed": {
+          "support_required": ["Support needed for adoption"],
+          "opposition": ["Opposition to adoption"]),
+          "compromises_needed": ["Compromises required for adoption"],
+          "veto_players": ["Actors with veto power"]
+        },
+        "likelihood": {
+          "adoption_probability": "High/Medium/Low",
+          "timeline": "Expected timeline for decision",
+          "key_events": ["Events that could affect decision"])
+        }
+      },
+      "implementation": {
+        "responsibility": {
+          "implementing_agencies": ["Agencies responsible for implementation"],
+          "frontline_workers": ["Frontline implementation actors"],
+          "target_population": ["Who must comply or participate"],
+          "oversight_bodies": ["Bodies overseeing implementation"]
+        },
+        "resources": {
+          "funding": "Funding available for implementation",
+          "staffing": "Staffing and capacity",
+          "technical_support": "Technical infrastructure",
+          "authority": "Legal and administrative authority"
+        },
+        "challenges": {
+          "capacity_gaps": ["Gaps in implementation capacity"],
+          "coordination_challenges": ["Coordination difficulties"],
+          "discretion_areas": ["Where implementers have discretion"],
+          "compliance_challenges": ["Compliance difficulties expected"]
+        },
+        "monitoring": {
+          "performance_metrics": ["Metrics for monitoring implementation"],
+          "reporting_requirements": "How implementation is reported",
+          "oversight_mechanisms": ["Oversight and accountability mechanisms"]
+        }
+      },
+      "evaluation": {
+        "what_evaluated": {
+          "process_evaluation": "How implementation is being evaluated",
+          "outcome_evaluation": "What outcomes are being evaluated",
+          "impact_evaluation": "How causal impacts are assessed",
+          "cost_evaluation": "How costs and benefits are assessed"
+        },
+        "methods": {
+          "evaluation_design": "Evaluation methodology",
+          "data_collection": "How data is collected",
+          "analysis_methods": "How data is analyzed",
+          "comparison": "What comparisons are made"
+        },
+        "timeline": {
+          "evaluation_schedule": "When evaluation occurs",
+          "reporting_timeline": "When findings are reported",
+          "decision_timeline": "When evaluation will inform decisions"
+        },
+        "use": {
+          "instrumental_use": "How findings directly inform decisions",
+          "conceptual_use": "How findings inform thinking",
+          "political_use": "How findings are used politically"
+        }
+      }
+    },
+    "stage_history": {
+      "agenda_setting_history": {
+        "when_entered_agenda": "When issue first got on agenda",
+        "agenda_path": "Path through agenda stages",
+        "key_milestones": ["Key agenda milestones"]
+      },
+      "formulation_history": {
+        "when_formulation_started": "When formulation began",
+        "formulation_process": "Major formulation activities",
+        "iterations": ["Major formulation iterations"])
+      },
+      "decision_history": {
+        "when_decision_began": "When decision process started",
+        "decision_attempts": ["Previous decision attempts"],
+        "outcomes": ["Previous decision outcomes"]
+      }
+    },
+    "implementation_challenges": {
+      "expected_challenges": [
+        {
+          "challenge": "Description of implementation challenge",
+          "severity": "High/Medium/Low",
+          "likelihood": "High/Medium/Low",
+          "mitigation": ["How challenge could be mitigated"]
+        }
+      ],
+      "contingency_plans": [
+        "Contingency plans for implementation problems"
+      ]
+    },
+    "feedback_loops": {
+      "to_agenda": [
+        "Issues that might return to agenda setting"
+      ],
+      "to_formulation": [
+        "Potential policy redesigns or reforms"
+      ],
+      "to_decision": [
+        "Possible reconsiderations or modifications"
+      ]
+    },
+    "contextual_factors": {
+      "political_system": {
+        "system_type": "Type of political system",
+        "institutional_arrangements": ["Key institutional features"],
+        "decision_rules": "Rules that affect policy process"
+      },
+      "political_factors": {
+        "ideological_climate": "Current ideological context",
+        "partisan_dynamics": "Partisan or coalition dynamics",
+        "public_opinion": "Public opinion on the issue"
+      },
+      "economic_factors": {
+        "economic_conditions": "Current economic conditions",
+        "fiscal_constraints": "Budget or fiscal constraints",
+        "market_conditions": "Relevant market conditions"
+      },
+      "social_factors": {
+        "demographic_changes": ["Relevant demographic trends"],
+        "social_attitudes": "Public attitudes on related issues",
+        "social_movements": ["Relevant social movements"]
+      },
+      "international_factors": {
+        "international_obligations": ["International commitments or obligations"],
+        "cross_border_effects": "Cross-border impacts or influences",
+        "international_learning": "Learning from other countries"
+      }
+    },
+    "future_projections": {
+      "likely_stage_progression": "How policy likely progresses through stages",
+      "bottlenecks": ["Potential bottlenecks or obstacles"],
+      "opportunities": ["Opportunities for acceleration or improvement"],
+      "timeline_expectations": "Expected timeline for progression"
+    }
+  },
+  "output_requirements": {
+    "required_sections": [
+      "policy_issue",
+      "current_stage",
+      "stage_analysis"
+    ],
+    "optional_sections": [
+      "stage_history",
+      "implementation_challenges",
+      "feedback_loops",
+      "contextual_factors",
+      "future_projections"
+    ],
+    "quality_checks": [
+      "Identify current stage accurately",
+      "Analyze stage dynamics not just formal structure",
+      "Consider political dynamics at each stage",
+      "Identify potential bottlenecks and opportunities",
+      "Acknowledge non-linearity and reversals",
+      "Consider multi-level and international dimensions"
+    ]
+  }
+}

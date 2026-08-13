@@ -1,0 +1,202 @@
+{
+  "template_type": "alternatives_evaluation",
+  "version": "1.0",
+  "description": "Structured template for policy alternatives evaluation using Multi-Criteria Decision Analysis",
+  "metadata": {
+    "created": "2026-08-04",
+    "framework": "Bardach's Eightfold Path + MCDA methodology",
+    "output_format": "structured_json"
+  },
+  "structure": {
+    "policy_issue": {
+      "issue_title": "Brief title for the policy issue",
+      "country_context": "Country or jurisdiction",
+      "decision_context": "Context for the policy decision",
+      "analysis_objective": "What this evaluation aims to achieve"
+    },
+    "alternatives": [
+      {
+        "name": "Alternative name",
+        "description": "Clear description of the alternative",
+        "mechanism": "How the alternative works",
+        "key_features": [
+          "Important characteristics of this alternative"
+        ],
+        "theoretical_basis": "Theoretical or empirical basis for this approach",
+        "examples": [
+          "Examples of where this alternative has been used"
+        ]
+      }
+    ],
+    "evaluation_criteria": [
+      {
+        "name": "Criterion name",
+        "description": "What this criterion captures and why it matters",
+        "weight": 0.15,
+        "measurement": "How this criterion is measured or assessed",
+        "weight_justification": "Rationale for the assigned weight",
+        "data_sources": [
+          "Sources of evidence for scoring on this criterion"
+        ]
+      }
+    ],
+    "scoring_matrix": [
+      {
+        "alternative": "Alternative name",
+        "scores": {
+          "criterion_1": {
+            "score": 4,
+            "evidence": "Evidence or reasoning supporting this score",
+            "uncertainty": "Low/Medium/High",
+            "data_source": "Source of evidence"
+          },
+          "criterion_2": {
+            "score": 3,
+            "evidence": "Evidence or reasoning supporting this score",
+            "uncertainty": "Low/Medium/High",
+            "data_source": "Source of evidence"
+          }
+        },
+        "weighted_score": 3.75,
+        "score_narrative": "Brief narrative explaining performance"
+      }
+    ],
+    "results": {
+      "rankings": [
+        "Alternatives ranked by total weighted score"
+      ],
+      "top_performer": "Highest-scoring alternative",
+      "performance_summary": [
+        {
+          "alternative": "Alternative name",
+          "strengths": ["Criteria where it performs well"],
+          "weaknesses": ["Criteria where it performs poorly"]
+        }
+      ],
+      "key_tradeoffs": [
+        {
+          "tradeoff_description": "Description of tradeoff",
+          "alternatives_involved": ["Alternatives involved in this tradeoff"],
+          "values_in_conflict": ["Values being traded off"]
+        }
+      ]
+    },
+    "sensitivity_analysis": {
+      "weight_sensitivity": [
+        {
+          "criterion": "Criterion name",
+          "weight_change": "Weight variation tested",
+          "impact_on_rankings": "How rankings change with this weight variation"
+        }
+      ],
+      "score_sensitivity": [
+        {
+          "alternative": "Alternative name",
+          "criterion": "Criterion name",
+          "score_range": "Range of plausible scores",
+          "impact_on_results": "How this uncertainty affects overall results"
+        }
+      ],
+      "robustness_assessment": "Overall assessment of result robustness to reasonable variations"
+    },
+    "recommendations": {
+      "recommended_alternatives": [
+        "Alternative(s) recommended based on analysis"
+      ],
+      "recommendation_strength": "Strong/Moderate/Weak",
+      "rationale": "Why these alternatives are recommended",
+      "conditions": [
+        "Conditions under which recommendations hold"
+      ],
+      "modifications": [
+        "Suggested improvements or hybrid approaches"
+      ],
+      "implementation_considerations": [
+        "Key implementation considerations for recommended alternatives"
+      ]
+    },
+    "distributional_analysis": {
+      "who_gains": [
+        {
+          "group": "Group that gains",
+          "nature_of_benefit": "How they benefit",
+          "magnitude": "Large/Medium/Small"
+        }
+      ],
+      "who_loses": [
+        {
+          "group": "Group that loses",
+          "nature_of_loss": "How they are affected",
+          "magnitude": "Large/Medium/Small"
+        }
+      ],
+      "equity_assessment": "Overall assessment of distributional fairness"
+    },
+    "uncertainties": {
+      "data_limitations": [
+        "Key data gaps or limitations"
+      ],
+      "assumptions": [
+        "Critical assumptions made in analysis"
+      ],
+      "model_uncertainties": [
+        "Uncertainties in modeling or projections"
+      ],
+      "expertise_uncertainties": [
+        "Areas where expert consensus is lacking"
+      ],
+      "contextual_uncertainties": [
+        "Uncertainties about contextual factors"
+      ]
+    },
+    "qualitative_considerations": [
+      {
+        "consideration": "Description of qualitative factor",
+        "impact": "How this consideration affects the decision",
+        "treatment": "How this factor was treated in analysis"
+      }
+    ],
+    "implementation_feasibility": [
+      {
+        "alternative": "Alternative name",
+        "political_feasibility": "High/Medium/Low",
+        "administrative_feasibility": "High/Medium/Low",
+        "technical_feasibility": "High/Medium/Low",
+        "financial_feasibility": "High/Medium/Low",
+        "timeline": "Realistic implementation timeline",
+        "capacity_requirements": ["Capacity needed for implementation"]
+      }
+    ],
+    "comparison_to_status_quo": {
+      "status_quo_description": "Description of current situation (no policy change)",
+      "status_quo_score": "How status quo scores on criteria",
+      "improvement_assessment": "How alternatives compare to status quo",
+      "change_costs": "Costs or challenges of changing from status quo"
+    }
+  },
+  "output_requirements": {
+    "required_sections": [
+      "policy_issue",
+      "alternatives",
+      "evaluation_criteria",
+      "scoring_matrix",
+      "results"
+    ],
+    "optional_sections": [
+      "sensitivity_analysis",
+      "distributional_analysis",
+      "uncertainties",
+      "qualitative_considerations",
+      "implementation_feasibility",
+      "comparison_to_status_quo"
+    ],
+    "quality_checks": [
+      "Include at least 3-5 distinct alternatives",
+      "Use 5-9 evaluation criteria covering major values",
+      "Ensure weights sum to 1.0 or 100%",
+      "Document evidence sources for scores",
+      "Identify key tradeoffs explicitly",
+      "Include status quo as an alternative"
+    ]
+  }
+}

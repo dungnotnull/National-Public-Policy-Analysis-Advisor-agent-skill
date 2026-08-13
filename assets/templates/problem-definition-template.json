@@ -1,0 +1,131 @@
+{
+  "template_type": "problem_definition",
+  "version": "1.0",
+  "description": "Structured template for policy problem definition and framing analysis",
+  "metadata": {
+    "created": "2026-08-04",
+    "framework": "Stone's Policy Paradox + Bardach's Problem Definition",
+    "output_format": "structured_json"
+  },
+  "structure": {
+    "issue_overview": {
+      "issue_title": "Brief title for the policy issue",
+      "country_context": "Country or jurisdiction of analysis",
+      "temporal_context": "Timeframe for the analysis",
+      "issue_description": "Neutral description of observable situation"
+    },
+    "situational_analysis": {
+      "observable_facts": [
+        "Empirical, observable facts that establish the situation"
+      ],
+      "affected_stakeholders": [
+        "Groups or individuals affected by the situation"
+      ],
+      "current_consequences": [
+        "Observable and potential consequences of the situation"
+      ],
+      "trends": [
+        "Relevant trends affecting the situation"
+      ]
+    },
+    "problem_statement": {
+      "core_problem": "Clear statement of what makes the situation problematic",
+      "violated_values": [
+        "Values, expectations, or norms being violated"
+      ],
+      "gap_description": "Gap between current state and desired state",
+      "problem_significance": "Why this problem matters and warrants attention"
+    },
+    "competing_framings": [
+      {
+        "framing_type": "economic/rights/technical/political/cultural",
+        "framing_name": "Short name for this framing",
+        "narrative": "How this framing tells the story of the problem",
+        "problem_definition": "How problem is defined under this framing",
+        "solutions_implied": [
+          "What solutions this framing makes logical or visible"
+        ],
+        "beneficiaries": [
+          "Who benefits from this framing"
+        ],
+        "disadvantaged": [
+          "Who is disadvantaged by this framing"
+        ],
+        "responsibility_assigned": "Who is responsible for fixing the problem under this framing",
+        "success_metrics": [
+          "What would count as success under this framing"
+        ]
+      }
+    ],
+    "working_framings": {
+      "selected_framings": [
+        "Primary framing(s) selected for this analysis"
+      ],
+      "selection_rationale": "Why these framing(s) were selected",
+      "alternative_perspectives": [
+        "What other framings would emphasize"
+      ],
+      "framing_acknowledgment": "Acknowledgment that multiple valid framings exist"
+    },
+    "values_at_stake": {
+      "primary_values": [
+        "Core values implicated in this problem"
+      ],
+      "value_conflicts": [
+        "Conflicts between competing values"
+      ],
+      "value_tradeoffs": [
+        "Tradeoffs between different values"
+      ]
+    },
+    "success_criteria": {
+      "outcomes": [
+        "What would count as progress or success"
+      ],
+      "measurement": [
+        "How success would be recognized or measured"
+      ],
+      "timeline": "Reasonable timeframe for achieving progress"
+    },
+    "contextual_factors": {
+      "political_context": "Relevant political dynamics",
+      "economic_context": "Relevant economic conditions",
+      "social_context": "Relevant social factors",
+      "institutional_context": "Relevant institutional arrangements",
+      "historical_context": "Relevant historical background",
+      "international_context": "Relevant international influences"
+    },
+    "limitations": {
+      "what_excluded": [
+        "What this problem definition explicitly excludes"
+      ],
+      "uncertainties": [
+        "Uncertainties or ambiguities in the problem definition"
+      ],
+      "contested_elements": [
+        "Elements that are genuinely contested"
+      ]
+    }
+  },
+  "output_requirements": {
+    "required_sections": [
+      "issue_overview",
+      "situational_analysis",
+      "problem_statement",
+      "competing_framings",
+      "working_framings",
+      "values_at_stake"
+    ],
+    "optional_sections": [
+      "success_criteria",
+      "contextual_factors",
+      "limitations"
+    ],
+    "formatting_rules": [
+      "Use neutral, non-inflammatory language",
+      "Present multiple framings objectively",
+      "Acknowledge value conflicts explicitly",
+      "Avoid taking sides on contested questions"
+    ]
+  }
+}

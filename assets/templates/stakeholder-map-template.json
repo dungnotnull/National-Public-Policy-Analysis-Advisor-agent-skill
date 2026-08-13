@@ -1,0 +1,198 @@
+{
+  "template_type": "stakeholder_mapping",
+  "version": "1.0",
+  "description": "Structured template for stakeholder analysis and mapping",
+  "metadata": {
+    "created": "2026-08-04",
+    "framework": "Sabatier & Jenkins-Smith Advocacy Coalition Framework + Freeman Stakeholder Theory",
+    "output_format": "structured_json"
+  },
+  "structure": {
+    "issue_context": {
+      "policy_issue": "Brief description of policy issue",
+      "analysis_scope": "Scope of stakeholder analysis",
+      "temporal_context": "Timeframe for stakeholder relevance"
+    },
+    "stakeholder_categories": {
+      "government_actors": [
+        {
+          "name": "Stakeholder name",
+          "type": "executive/legislative/judicial/administrative/sub-national",
+          "specific_entity": "Specific agency, department, or body",
+          "role": "Formal role in policy process"
+        }
+      ],
+      "private_sector": [
+        {
+          "name": "Stakeholder name",
+          "type": "industry_association/individual_firm/labor_union/professional_association",
+          "sector": "Economic sector",
+          "size": "Scale of influence or membership"
+        }
+      ],
+      "civil_society": [
+        {
+          "name": "Stakeholder name",
+          "type": "advocacy_group/ngo/charity/social_movement/religious_organization",
+          "focus_area": "Primary issue focus",
+          "membership_base": "Size and nature of membership"
+        }
+      ],
+      "international_actors": [
+        {
+          "name": "Stakeholder name",
+          "type": "foreign_government/international_organization/multinational_corporation",
+          "interest_in_issue": "Why this actor is relevant"
+        }
+      ],
+      "individual_citizens": [
+        {
+          "name": "Group name",
+          "type": "directly_affected/general_public/future_generations",
+          "characteristics": "Defining characteristics"
+        }
+      ]
+    },
+    "detailed_stakeholders": [
+      {
+        "name": "Stakeholder name",
+        "category": "Government/Private/Civil Society/International/Citizens",
+        "type": "Specific type within category",
+        "interests": {
+          "material": ["Economic or resource interests"],
+          "ideational": ["Values, beliefs, or principles"],
+          "political": ["Power, influence, or legitimacy goals"],
+          "institutional": ["Organizational survival, budget, authority"]
+        },
+        "positions": {
+          "public_stance": "Publicly stated position on the issue",
+          "private_stance": "Private or actual preferred position if known",
+          "intensity": "High/Medium/Low",
+          "negotiability": "What aspects are negotiable",
+          "red_lines": ["Non-negotiable positions"]
+        },
+        "power_resources": {
+          "formal_authority": "Legal or political power held",
+          "economic_resources": "Financial resources or market power",
+          "social_capital": "Network relationships and connections",
+          "information_access": "Expertise or data access",
+          "moral_authority": "Legitimacy and credibility",
+          "mobilization_capacity": "Ability to activate supporters"
+        },
+        "engagement_likelihood": "High/Medium/Low",
+        "internal_divisions": ["Internal disagreements or factions"],
+        "alliances": ["Other stakeholders this actor typically aligns with"]
+      }
+    ],
+    "advocacy_coalitions": [
+      {
+        "coalition_name": "Name of the coalition",
+        "members": ["List of stakeholder members"],
+        "core_beliefs": ["Unifying beliefs or principles"],
+        "shared_interests": ["Common interests holding coalition together"],
+        "resources": ["Collective resources the coalition can mobilize"],
+        "strategies": ["Typical advocacy or influence strategies"],
+        "leaders": ["Key organizations or individuals leading the coalition"]
+      }
+    ],
+    "conflict_analysis": {
+      "primary_cleavages": [
+        {
+          "cleavage_description": "Description of main conflict line",
+          "sides": ["Stakeholders or coalitions on each side"],
+          "conflict_type": "economic/ideological/territorial/institutional",
+          "intensity": "High/Medium/Low"
+        }
+      ],
+      "secondary_conflicts": [
+        {
+          "conflict_description": "Description of secondary conflict",
+          "stakeholders_involved": ["Stakeholders involved"]
+        }
+      ],
+      "potential_alliances": [
+        ["Stakeholder 1", "Stakeholder 2"]
+      ],
+      "bridge_actors": [
+        {
+          "actor": "Stakeholder name",
+          "role": "How this actor can bridge between coalitions",
+          "influence": "Extent of bridging influence"
+        }
+      ]
+    },
+    "influence_pathways": {
+      "formal_channels": [
+        "Legislative processes",
+        "Regulatory proceedings",
+        "Court cases",
+        "Official consultations"
+      ],
+      "informal_channels": [
+        "Lobbying and advocacy",
+        "Media campaigns",
+        "Public opinion mobilization",
+        "Backchannel negotiations"
+      ],
+      "direct_action": [
+        "Protests and demonstrations",
+        "Strikes or work stoppages",
+        "Boycotts",
+        "Civil disobedience"
+      ],
+      "expertise_channels": [
+        "Research and policy analysis",
+        "Technical assistance",
+        "Advisory committees",
+        "Expert testimony"
+      ]
+    },
+    "power_interest_matrix": {
+      "key_players": [
+        "Stakeholders with high power and high interest"
+      ],
+      "keep_satisfied": [
+        "Stakeholders with high power but low interest"
+      ],
+      "keep_informed": [
+        "Stakeholders with low power but high interest"
+      ],
+      "monitor": [
+        "Stakeholders with low power and low interest"
+      ]
+    },
+    "temporal_dynamics": {
+      "historical_evolution": "How stakeholder positions have evolved over time",
+      "likely_changes": ["Predicted changes in stakeholder positions or influence"],
+      "emerging_stakeholders": ["New or emerging stakeholders to watch"]
+    },
+    "implementation_considerations": {
+      "supportive_stakeholders": ["Stakeholders likely to support implementation"],
+      "opposing_stakeholders": ["Stakeholders likely to oppose implementation"],
+      "implementation_coalitions_needed": ["Coalitions required for successful implementation"],
+      "implementation_risks": ["Risks from stakeholder dynamics during implementation"]
+    }
+  },
+  "output_requirements": {
+    "required_sections": [
+      "issue_context",
+      "stakeholder_categories",
+      "detailed_stakeholders",
+      "advocacy_coalitions",
+      "conflict_analysis"
+    ],
+    "optional_sections": [
+      "influence_pathways",
+      "power_interest_matrix",
+      "temporal_dynamics",
+      "implementation_considerations"
+    ],
+    "quality_checks": [
+      "Include all relevant stakeholder categories",
+      "Distinguish between positions and underlying interests",
+      "Assess power resources beyond formal status",
+      "Identify potential for compromise and alliance-building",
+      "Consider future generations and absent stakeholders"
+    ]
+  }
+}

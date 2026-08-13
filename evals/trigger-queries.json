@@ -1,0 +1,241 @@
+{
+  "skill_name": "public-policy-analysis-advisor",
+  "description": "Trigger evaluation queries for skill description optimization",
+  "queries": [
+    {
+      "query": "I need to analyze the policy problem of housing affordability in Toronto. Can you help me define and frame this issue?",
+      "should_trigger": true,
+      "trigger_reason": "Direct request for policy problem definition and framing"
+    },
+    {
+      "query": "Who are the key stakeholders for climate policy in Germany and what are their interests?",
+      "should_trigger": true,
+      "trigger_reason": "Request for stakeholder analysis in policy context"
+    },
+    {
+      "query": "Compare carbon tax and cap-and-trade as policy alternatives for reducing emissions in Canada",
+      "should_trigger": true,
+      "trigger_reason": "Request for policy alternatives evaluation"
+    },
+    {
+      "query": "What does the research say about the effectiveness of minimum wage policies?",
+      "should_trigger": true,
+      "trigger_reason": "Request for evidence synthesis on policy effectiveness"
+    },
+    {
+      "query": "Where is healthcare policy in the policy cycle in France and what are the next steps?",
+      "should_trigger": true,
+      "trigger_reason": "Request for policy cycle stage analysis"
+    },
+    {
+      "query": "My boss wants me to write a policy memo on urban transportation. Can you help me structure it?",
+      "should_trigger": true,
+      "trigger_reason": "Request for policy analysis structure and methodology"
+    },
+    {
+      "query": "I'm studying public policy and need to understand how to analyze stakeholder interests",
+      "should_trigger": true,
+      "trigger_reason": "Request for policy analysis methodology and frameworks"
+    },
+    {
+      "query": "Analyze the tradeoffs between different policy options for addressing income inequality",
+      "should_trigger": true,
+      "trigger_reason": "Request for policy alternatives evaluation and tradeoff analysis"
+    },
+    {
+      "query": "What are the competing framings of the immigration policy debate in the US?",
+      "should_trigger": true,
+      "trigger_reason": "Request for problem framing analysis of policy issue"
+    },
+    {
+      "query": "Help me understand the evidence on charter school effectiveness",
+      "should_trigger": true,
+      "trigger_reason": "Request for evidence synthesis on education policy"
+    },
+    {
+      "query": "Calculate the area of a circle with radius 5",
+      "should_trigger": false,
+      "trigger_reason": "Mathematical question unrelated to policy analysis"
+    },
+    {
+      "query": "Write a poem about spring",
+      "should_trigger": false,
+      "trigger_reason": "Creative writing request unrelated to policy"
+    },
+    {
+      "query": "What's the weather like tomorrow?",
+      "should_trigger": false,
+      "trigger_reason": "Weather forecast request unrelated to policy"
+    },
+    {
+      "query": "Explain quantum physics to me",
+      "should_trigger": false,
+      "trigger_reason": "Scientific explanation request without policy context"
+    },
+    {
+      "query": "How do I bake a chocolate cake?",
+      "should_trigger": false,
+      "trigger_reason": "Recipe request unrelated to policy"
+    },
+    {
+      "query": "My team is debating whether to adopt a new project management tool. Can you analyze the options?",
+      "should_trigger": true,
+      "trigger_reason": "Decision analysis with policy-like structure (organizational policy)"
+    },
+    {
+      "query": "What are the arguments for and against rent control in cities?",
+      "should_trigger": true,
+      "trigger_reason": "Request for balanced policy analysis on contested issue"
+    },
+    {
+      "query": "I need to convince my city council to support bike lanes. What evidence should I use?",
+      "should_trigger": true,
+      "trigger_reason": "Request for evidence synthesis for policy advocacy"
+    },
+    {
+      "query": "Compare the healthcare systems of Canada and the UK",
+      "should_trigger": true,
+      "trigger_reason": "Comparative policy analysis request"
+    },
+    {
+      "query": "The EPA just announced new regulations. What does this mean for businesses?",
+      "should_trigger": true,
+      "trigger_reason": "Request for policy analysis and impact assessment"
+    },
+    {
+      "query": "I'm writing a paper on environmental policy. Can you help me structure my literature review?",
+      "should_trigger": true,
+      "trigger_reason": "Request for policy research methodology assistance"
+    },
+    {
+      "query": "What are the pros and cons of universal basic income?",
+      "should_trigger": true,
+      "trigger_reason": "Request for policy alternatives evaluation"
+    },
+    {
+      "query": "How do policy analysts approach problem definition?",
+      "should_trigger": true,
+      "trigger_reason": "Request for policy analysis methodology explanation"
+    },
+    {
+      "query": "Summarize the latest research on remote work productivity",
+      "should_trigger": true,
+      "trigger_reason": "Evidence synthesis request with policy implications"
+    },
+    {
+      "query": "What factors influence whether a policy gets implemented successfully?",
+      "should_trigger": true,
+      "trigger_reason": "Request for implementation analysis framework"
+    },
+    {
+      "query": "I need to understand the political dynamics around tax reform in my country",
+      "should_trigger": true,
+      "trigger_reason": "Request for stakeholder and political analysis"
+    },
+    {
+      "query": "Can you fix this bug in my Python code?",
+      "should_trigger": false,
+      "trigger_reason": "Code debugging request unrelated to policy"
+    },
+    {
+      "query": "Translate this document from Spanish to English",
+      "should_trigger": false,
+      "trigger_reason": "Translation request unrelated to policy"
+    },
+    {
+      "query": "What time is it in Tokyo?",
+      "should_trigger": false,
+      "trigger_reason": "Time zone query unrelated to policy"
+    },
+    {
+      "query": "Recommend some good science fiction books",
+      "should_trigger": false,
+      "trigger_reason": "Book recommendation unrelated to policy"
+    },
+    {
+      "query": "How do I format my resume?",
+      "should_trigger": false,
+      "trigger_reason": "Career advice request without policy context"
+    },
+    {
+      "query": "What's the difference between a Democrat and a Republican?",
+      "should_trigger": true,
+      "trigger_reason": "Request for political/policy analysis, though requires careful handling of partisan context"
+    },
+    {
+      "query": "Analyze whether gun control laws reduce crime",
+      "should_trigger": true,
+      "trigger_reason": "Request for evidence synthesis on contested policy issue (requires balanced perspective)"
+    },
+    {
+      "query": "My professor wants a policy analysis paper. Can you help me outline it?",
+      "should_trigger": true,
+      "trigger_reason": "Request for policy analysis structure and methodology"
+    },
+    {
+      "query": "What are the key considerations when evaluating policy alternatives?",
+      "should_trigger": true,
+      "trigger_reason": "Request for policy analysis methodology"
+    },
+    {
+      "query": "How do I identify stakeholders for a policy issue?",
+      "should_trigger": true,
+      "trigger_reason": "Request for stakeholder analysis methodology"
+    },
+    {
+      "query": "Compare the policy approaches to drug legalization in different countries",
+      "should_trigger": true,
+      "trigger_reason": "Comparative policy analysis request"
+    },
+    {
+      "query": "What evidence should I consider when analyzing education reform?",
+      "should_trigger": true,
+      "trigger_reason": "Request for evidence synthesis guidance in policy context"
+    },
+    {
+      "query": "I'm lobbying for environmental regulations. What arguments should I make?",
+      "should_trigger": true,
+      "trigger_reason": "Request for policy advocacy support (note: may require ethical considerations)"
+    },
+    {
+      "query": "How would a policy analyst approach this problem?",
+      "should_trigger": true,
+      "trigger_reason": "Request for policy analysis framework application"
+    },
+    {
+      "query": "What are the steps in the policy cycle?",
+      "should_trigger": true,
+      "trigger_reason": "Request for policy cycle framework explanation"
+    },
+    {
+      "query": "How do I assess the credibility of policy research sources?",
+      "should_trigger": true,
+      "trigger_reason": "Request for source credibility assessment in policy context"
+    },
+    {
+      "query": "Can you help me think through the tradeoffs in this policy decision?",
+      "should_trigger": true,
+      "trigger_reason": "Request for policy decision analysis and tradeoff identification"
+    },
+    {
+      "query": "What would be the unintended consequences of this policy proposal?",
+      "should_trigger": true,
+      "trigger_reason": "Request for policy analysis and consequence assessment"
+    },
+    {
+      "query": "How do different political systems affect policy outcomes?",
+      "should_trigger": true,
+      "trigger_reason": "Request for comparative policy analysis"
+    },
+    {
+      "query": "What are the equity implications of this tax policy?",
+      "should_trigger": true,
+      "trigger_reason": "Request for distributional analysis in policy context"
+    },
+    {
+      "query": "Help me design a survey to evaluate public opinion on transportation policy",
+      "should_trigger": true,
+      "trigger_reason": "Request for policy evaluation methodology"
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Skill Evaluation Schema",
+  "description": "Schema for evaluating Public Policy Analysis Advisor skill outputs",
+  "type": "object",
+  "required": ["evaluation_id", "test_case", "criteria"],
+  "properties": {
+    "evaluation_id": {
+      "type": "string",
+      "description": "Unique identifier for this evaluation"
+    },
+    "test_case": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Test case identifier"
+        },
+        "prompt": {
+          "type": "string",
+          "description": "The user prompt that triggered the skill"
+        },
+        "input_data": {
+          "type": "object",
+          "description": "Input data provided to the skill"
+        },
+        "expected_outputs": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Expected outputs or outcomes"
+        }
+      }
+    },
+    "criteria": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Criterion name"
+          },
+          "description": {
+            "type": "string",
+            "description": "What this criterion evaluates"
+          },
+          "weight": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "description": "Weight of this criterion in overall evaluation"
+          },
+          "evaluation_method": {
+            "type": "string",
+            "enum": ["automated", "manual", "hybrid"],
+            "description": "How this criterion is evaluated"
+          },
+          "assertions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "assertion": {
+                  "type": "string",
+                  "description": "The assertion being tested"
+                },
+                "expected": {
+                  "description": "Expected result"
+                },
+                "test_function": {
+                  "type": "string",
+                  "description": "Function to test this assertion"
+                }
+              },
+              "required": ["assertion"]
+            }
+          }
+        },
+        "required": ["name", "description", "weight"]
+      }
+    },
+    "results": {
+      "type": "object",
+      "properties": {
+        "overall_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Overall weighted score"
+        },
+        "criterion_scores": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "criterion": {
+                "type": "string",
+                "description": "Criterion name"
+              },
+              "score": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1,
+                "description": "Score for this criterion"
+              },
+              "weight": {
+                "type": "number",
+                "description": "Weight applied to this criterion"
+              },
+              "weighted_score": {
+                "type": "number",
+                "description": "Weighted score contribution"
+              },
+              "details": {
+                "type": "object",
+                "description": "Detailed evaluation results"
+              }
+            }
+          }
+        },
+        "assertion_results": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "assertion": {
+                "type": "string",
+                "description": "Assertion tested"
+              },
+              "passed": {
+                "type": "boolean",
+                "description": "Whether assertion passed"
+              },
+              "evidence": {
+                "type": "string",
+                "description": "Evidence for the result"
+              }
+            }
+          }
+        },
+        "qualitative_feedback": {
+          "type": "object",
+          "properties": {
+            "strengths": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "Identified strengths"
+            },
+            "weaknesses": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "Identified weaknesses"
+            },
+            "suggestions": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "Suggestions for improvement"
+            }
+          }
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "evaluated_at": {
+          "type": "string",
+          "format": "date-time",
+          "description": "When evaluation was performed"
+        },
+        "evaluated_by": {
+          "type": "string",
+          "description": "Who or what performed the evaluation"
+        },
+        "skill_version": {
+          "type": "string",
+          "description": "Skill version evaluated"
+        }
+      }
+    }
+  }
+}

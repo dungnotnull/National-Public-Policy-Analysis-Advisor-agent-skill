@@ -1,0 +1,274 @@
+{
+  "skill_name": "public-policy-analysis-advisor",
+  "version": "1.0.0",
+  "description": "Evaluation test cases for the Public Policy Analysis Advisor skill",
+  "evals": [
+    {
+      "id": 1,
+      "name": "Full Policy Analysis - Carbon Pricing",
+      "prompt": "Analyze the carbon pricing policy in Canada, including problem definition, stakeholder analysis, policy alternatives, evidence synthesis, and policy cycle analysis.",
+      "input_data": {
+        "policy_issue": "Carbon pricing policy to reduce greenhouse gas emissions",
+        "country": "CA",
+        "analysis_type": "full",
+        "context": {
+          "user_goal": "Understand comprehensive policy landscape for carbon pricing in Canada",
+          "audience": "Policy researchers and students"
+        }
+      },
+      "expected_output": "Comprehensive analysis covering all five frameworks",
+      "assertions": [
+        {
+          "description": "Includes problem definition section",
+          "type": "field_exists",
+          "field": "result.analysis.problem_definition"
+        },
+        {
+          "description": "Includes stakeholder analysis section",
+          "type": "field_exists",
+          "field": "result.analysis.stakeholder_analysis"
+        },
+        {
+          "description": "Includes at least 3 policy alternatives",
+          "type": "min_length",
+          "field": "result.analysis.alternatives_evaluation.alternatives",
+          "min_length": 3
+        },
+        {
+          "description": "Includes evidence synthesis with multiple sources",
+          "type": "min_length",
+          "field": "result.analysis.evidence_synthesis.sources",
+          "min_length": 3
+        },
+        {
+          "description": "Includes mandatory disclaimer",
+          "type": "disclaimer_included"
+        },
+        {
+          "description": "Mentions carbon tax as an alternative",
+          "type": "contains",
+          "text": "carbon tax"
+        },
+        {
+          "description": "Mentions stakeholder groups like industry, environmental groups",
+          "type": "contains",
+          "text": "stakeholder"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Stakeholder Analysis - Housing Policy",
+      "prompt": "Map the stakeholders for housing affordability policy in Germany. Who are the key actors, what are their interests and power resources, and what coalitions exist?",
+      "input_data": {
+        "policy_issue": "Housing affordability policy",
+        "country": "DE",
+        "analysis_type": "stakeholder_analysis",
+        "context": {
+          "user_goal": "Understand stakeholder landscape for housing policy"
+        }
+      },
+      "expected_output": "Detailed stakeholder mapping with interests, power, and coalitions",
+      "assertions": [
+        {
+          "description": "Includes stakeholder categories",
+          "type": "field_exists",
+          "field": "result.analysis.stakeholder_analysis.categories"
+        },
+        {
+          "description": "Includes detailed stakeholder information",
+          "type": "min_length",
+          "field": "result.analysis.stakeholder_analysis.detailed_stakeholders",
+          "min_length": 5
+        },
+        {
+          "description": "Identifies advocacy coalitions",
+          "type": "field_exists",
+          "field": "result.analysis.stakeholder_analysis.advocacy_coalitions"
+        },
+        {
+          "description": "Analyzes power resources",
+          "type": "contains",
+          "text": "power"
+        },
+        {
+          "description": "Mandatory disclaimer included",
+          "type": "disclaimer_included"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Alternatives Evaluation - Minimum Wage",
+      "prompt": "Evaluate policy alternatives for minimum wage policy in the United States. Compare at least 3 alternatives using multiple criteria including effectiveness, efficiency, equity, and political feasibility.",
+      "input_data": {
+        "policy_issue": "Minimum wage policy to address income inequality",
+        "country": "US",
+        "analysis_type": "alternatives_evaluation",
+        "context": {
+          "user_goal": "Compare policy options for minimum wage"
+        }
+      },
+      "expected_output": "Multi-criteria evaluation of at least 3 alternatives",
+      "assertions": [
+        {
+          "description": "Includes at least 3 alternatives",
+          "type": "min_length",
+          "field": "result.analysis.alternatives_evaluation.alternatives",
+          "min_length": 3
+        },
+        {
+          "description": "Includes evaluation criteria",
+          "type": "field_exists",
+          "field": "result.analysis.alternatives_evaluation.criteria"
+        },
+        {
+          "description": "Includes scoring matrix",
+          "type": "field_exists",
+          "field": "result.analysis.alternatives_evaluation.scoring_matrix"
+        },
+        {
+          "description": "Provides recommendations based on analysis",
+          "type": "field_exists",
+          "field": "result.analysis.alternatives_evaluation.recommendations"
+        },
+        {
+          "description": "Mentions tradeoffs between criteria",
+          "type": "contains",
+          "text": "tradeoff"
+        },
+        {
+          "description": "Mandatory disclaimer included",
+          "type": "disclaimer_included"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Problem Definition - Healthcare Access",
+      "prompt": "Define and frame the problem of healthcare access in rural Australia. Identify competing framings of this issue and the values at stake.",
+      "input_data": {
+        "policy_issue": "Healthcare access in rural areas",
+        "country": "AU",
+        "analysis_type": "problem_definition",
+        "context": {
+          "user_goal": "Understand how rural healthcare access is framed"
+        }
+      },
+      "expected_output": "Problem definition with multiple framings and value analysis",
+      "assertions": [
+        {
+          "description": "Identifies core problem statement",
+          "type": "field_exists",
+          "field": "result.analysis.problem_definition.core_problem"
+        },
+        {
+          "description": "Maps competing framings",
+          "type": "min_length",
+          "field": "result.analysis.problem_definition.competing_framings",
+          "min_length": 3
+        },
+        {
+          "description": "Identifies values at stake",
+          "type": "field_exists",
+          "field": "result.analysis.problem_definition.values_at_stake"
+        },
+        {
+          "description": "Describes affected stakeholders",
+          "type": "contains",
+          "text": "affected"
+        },
+        {
+          "description": "Mandatory disclaimer included",
+          "type": "disclaimer_included"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Evidence Synthesis - Education Policy",
+      "prompt": "Synthesize evidence on the effectiveness of class size reduction policies in education. What does the research say about impacts on student outcomes, and what are the limitations of the evidence?",
+      "input_data": {
+        "policy_issue": "Class size reduction policies in education",
+        "country": "US",
+        "analysis_type": "evidence_synthesis",
+        "context": {
+          "user_goal": "Understand what research says about class size reduction"
+        }
+      },
+      "expected_output": "Systematic evidence synthesis with quality assessment",
+      "assertions": [
+        {
+          "description": "Includes evidence question in PICO format",
+          "type": "field_exists",
+          "field": "result.analysis.evidence_synthesis.evidence_question"
+        },
+        {
+          "description": "Includes multiple studies",
+          "type": "min_length",
+          "field": "result.analysis.evidence_synthesis.studies_included",
+          "min_length": 3
+        },
+        {
+          "description": "Assesses study quality",
+          "type": "contains",
+          "text": "quality"
+        },
+        {
+          "description": "Identifies evidence limitations",
+          "type": "contains",
+          "text": "limitation"
+        },
+        {
+          "description": "Provides strength of evidence assessment",
+          "type": "field_exists",
+          "field": "result.analysis.evidence_synthesis.strength_of_evidence"
+        },
+        {
+          "description": "Mandatory disclaimer included",
+          "type": "disclaimer_included"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Policy Cycle Analysis - Climate Policy",
+      "prompt": "Analyze where climate change policy is in the policy cycle in Japan. What stage is it in, what are the dynamics at that stage, and what are the prospects for moving forward?",
+      "input_data": {
+        "policy_issue": "Climate change policy",
+        "country": "JP",
+        "analysis_type": "policy_cycle",
+        "context": {
+          "user_goal": "Understand current stage and prospects for climate policy"
+        }
+      },
+      "expected_output": "Policy cycle stage analysis with dynamics and prospects",
+      "assertions": [
+        {
+          "description": "Identifies current policy cycle stage",
+          "type": "field_exists",
+          "field": "result.analysis.policy_cycle.current_stage"
+        },
+        {
+          "description": "Analyzes stage dynamics",
+          "type": "field_exists",
+          "field": "result.analysis.policy_cycle.stage_analysis"
+        },
+        {
+          "description": "Considers feedback loops",
+          "type": "field_exists",
+          "field": "result.analysis.policy_cycle.feedback_loops"
+        },
+        {
+          "description": "Identifies contextual factors",
+          "type": "field_exists",
+          "field": "result.analysis.policy_cycle.contextual_factors"
+        },
+        {
+          "description": "Mandatory disclaimer included",
+          "type": "disclaimer_included"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Policy Analysis Input Schema",
+  "description": "Schema for validating inputs to the Public Policy Analysis Advisor skill",
+  "type": "object",
+  "required": ["policy_issue", "country", "analysis_type"],
+  "properties": {
+    "policy_issue": {
+      "type": "string",
+      "minLength": 10,
+      "description": "The policy issue to analyze",
+      "examples": [
+        "Carbon pricing policy to reduce greenhouse gas emissions",
+        "Minimum wage policy to address income inequality",
+        "Housing affordability policy in urban areas"
+      ]
+    },
+    "country": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$|^[A-Za-z\\s]+$",
+      "description": "ISO country code or country name",
+      "examples": ["CA", "Canada", "US", "United States", "DE", "Germany"]
+    },
+    "analysis_type": {
+      "type": "string",
+      "enum": ["full", "problem_definition", "stakeholder_analysis", "alternatives_evaluation", "evidence_synthesis", "policy_cycle"],
+      "description": "Type of analysis requested"
+    },
+    "context": {
+      "type": "object",
+      "properties": {
+        "user_goal": {
+          "type": "string",
+          "description": "What the user hopes to achieve with this analysis"
+        },
+        "audience": {
+          "type": "string",
+          "description": "Intended audience for the analysis"
+        },
+        "constraints": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Constraints or limitations on the analysis"
+        },
+        "timeframe": {
+          "type": "string",
+          "description": "Timeframe for the analysis or policy"
+        }
+      }
+    },
+    "preferences": {
+      "type": "object",
+      "properties": {
+        "detail_level": {
+          "type": "string",
+          "enum": ["brief", "standard", "detailed"],
+          "description": "Level of detail desired"
+        },
+        "output_format": {
+          "type": "string",
+          "enum": ["narrative", "structured", "both"],
+          "description": "Preferred output format"
+        },
+        "include_recommendations": {
+          "type": "boolean",
+          "description": "Whether to include policy recommendations"
+        }
+      }
+    },
+    "specific_focus": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Specific aspects to focus on",
+      "examples": [
+        ["distributional impacts", "administrative feasibility"],
+        ["environmental effectiveness", "economic efficiency"],
+        ["stakeholder impacts", "political viability"]
+      ]
+    }
+  },
+  "additionalProperties": false
+}

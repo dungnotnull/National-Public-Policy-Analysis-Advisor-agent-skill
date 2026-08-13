@@ -1,0 +1,242 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Policy Analysis Advisor Configuration Schema",
+  "description": "Schema for validating configuration of the Public Policy Analysis Advisor skill",
+  "type": "object",
+  "required": ["skill_metadata", "execution", "quality_standards"],
+  "properties": {
+    "skill_metadata": {
+      "type": "object",
+      "required": ["name", "version", "description"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "pattern": "^[a-z-]+$",
+          "description": "Skill identifier in kebab-case"
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$",
+          "description": "Semantic version number"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 50,
+          "maxLength": 500,
+          "description": "Skill description for triggering"
+        },
+        "author": {
+          "type": "string",
+          "description": "Skill author or maintainer"
+        },
+        "license": {
+          "type": "string",
+          "enum": ["MIT", "Apache-2.0", "GPL-3.0", "BSD-3-Clause", "proprietary"],
+          "description": "License type"
+        }
+      }
+    },
+    "execution": {
+      "type": "object",
+      "required": ["timeout", "retries", "memory_limit"],
+      "properties": {
+        "timeout": {
+          "type": "integer",
+          "minimum": 5000,
+          "maximum": 300000,
+          "default": 30000,
+          "description": "Execution timeout in milliseconds"
+        },
+        "retries": {
+          "type": "object",
+          "properties": {
+            "max_attempts": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 5,
+              "default": 3
+            },
+            "backoff_strategy": {
+              "type": "string",
+              "enum": ["exponential", "linear", "fixed"],
+              "default": "exponential"
+            },
+            "initial_delay": {
+              "type": "integer",
+              "minimum": 100,
+              "maximum": 10000,
+              "default": 1000
+            }
+          }
+        },
+        "memory_limit": {
+          "type": "string",
+          "pattern": "^\\d+[KMGT]?B$",
+          "default": "512MB",
+          "description": "Memory limit for execution"
+        },
+        "parallel_execution": {
+          "type": "boolean",
+          "default": true,
+          "description": "Whether parallel execution is supported"
+        }
+      }
+    },
+    "quality_standards": {
+      "type": "object",
+      "required": ["min_quality_score", "required_frameworks"],
+      "properties": {
+        "min_quality_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "default": 0.7,
+          "description": "Minimum quality score for acceptance"
+        },
+        "required_frameworks": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "problem_definition",
+              "stakeholder_analysis",
+              "alternatives_evaluation",
+              "evidence_synthesis",
+              "policy_cycle"
+            ]
+          },
+          "minItems": 1,
+          "description": "Required frameworks for analysis type"
+        },
+        "evidence_requirements": {
+          "type": "object",
+          "properties": {
+            "min_sources": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 3
+            },
+            "source_types": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": ["academic", "government", "think_tank", "international", "media"]
+              },
+              "minItems": 2
+            },
+            "recency_years": {
+              "type": "integer",
+              "minimum": 0,
+              "default": 10,
+              "description": "Maximum age of preferred sources (0 for no limit)"
+            }
+          }
+        },
+        "output_standards": {
+          "type": "object",
+          "properties": {
+            "require_disclaimer": {
+              "type": "boolean",
+              "default": true
+            },
+            "require_balanced_perspectives": {
+              "type": "boolean",
+              "default": true
+            },
+            "require_uncertainty_acknowledgment": {
+              "type": "boolean",
+              "default": true
+            },
+            "min_alternatives": {
+              "type": "integer",
+              "minimum": 2,
+              "default": 3
+            }
+          }
+        }
+      }
+    },
+    "feature_flags": {
+      "type": "object",
+      "properties": {
+        "enable_experimental_features": {
+          "type": "boolean",
+          "default": false
+        },
+        "enable_advanced_analytics": {
+          "type": "boolean",
+          "default": false
+        },
+        "enable_ml_enhancements": {
+          "type": "boolean",
+          "default": false
+        },
+        "enable_real_time_data": {
+          "type": "boolean",
+          "default": false
+        }
+      }
+    },
+    "logging": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string",
+          "enum": ["error", "warn", "info", "debug"],
+          "default": "info"
+        },
+        "include_timestamps": {
+          "type": "boolean",
+          "default": true
+        },
+        "include_stack_traces": {
+          "type": "boolean",
+          "default": false
+        },
+        "log_execution_time": {
+          "type": "boolean",
+          "default": true
+        }
+      }
+    },
+    "validation": {
+      "type": "object",
+      "properties": {
+        "strict_input_validation": {
+          "type": "boolean",
+          "default": true
+        },
+        "strict_output_validation": {
+          "type": "boolean",
+          "default": true
+        },
+        "allow_partial_results": {
+          "type": "boolean",
+          "default": true
+        },
+        "fallback_on_error": {
+          "type": "boolean",
+          "default": true
+        }
+      }
+    },
+    "customization": {
+      "type": "object",
+      "properties": {
+        "country_specific_defaults": {
+          "type": "object",
+          "description": "Country-specific default configurations"
+        },
+        "domain_specific_defaults": {
+          "type": "object",
+          "description": "Domain-specific default configurations"
+        },
+        "language": {
+          "type": "string",
+          "default": "en",
+          "pattern": "^[a-z]{2}$"
+        }
+      }
+    }
+  }
+}

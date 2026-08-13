@@ -1,0 +1,204 @@
+{
+  "template_type": "evidence_synthesis",
+  "version": "1.0",
+  "description": "Structured template for evidence synthesis and systematic review",
+  "metadata": {
+    "created": "2026-08-04",
+    "framework": "Systematic review methodology adapted for policy analysis",
+    "output_format": "structured_json"
+  },
+  "structure": {
+    "evidence_question": {
+      "question_formatted": "PICO-formatted question",
+      "population": "Who/what is being studied",
+      "intervention": "What policy, program, or intervention",
+      "comparator": "What the intervention is compared to",
+      "outcomes": "What outcomes are measured",
+      "study_design": "What study designs are included"
+    },
+    "search_strategy": {
+      "databases": [
+        "Databases searched (e.g., EconLit, PubMed, Google Scholar)"
+      ],
+      "search_terms": [
+        "Keywords and Boolean operators used"
+      ],
+      "time_period": "Years covered by search",
+      "inclusion_criteria": [
+        "Criteria for including studies"
+      ],
+      "exclusion_criteria": [
+        "Criteria for excluding studies"
+      ],
+      "search_process": "Description of search process"
+    },
+    "studies_included": [
+      {
+        "citation": "Full citation of the study",
+        "authors": ["Author names"],
+        "year": "Publication year",
+        "design": "RCT/quasi-experiment/observational/qualitative/mixed",
+        "population": "Study population description",
+        "sample_size": "Sample size or scope",
+        "intervention": "What was studied",
+        "comparison": "What intervention was compared to",
+        "outcomes": ["Outcomes measured"],
+        "findings": {
+          "primary_outcome": {
+            "effect_size": "Effect size or result",
+            "statistical_significance": "Statistical significance if reported",
+            "practical_significance": "Practical or policy significance"
+          },
+          "secondary_outcomes": [
+            "Other key findings"
+          ]
+        },
+        "quality_assessment": {
+          "overall_quality": "High/Medium/Low/Very Low",
+          "internal_validity": "Assessment of causal attribution",
+          "external_validity": "Assessment of generalizability",
+          "measurement_quality": "Quality of outcome measurement",
+          "methodology_strengths": ["Strengths of methodology"],
+          "methodology_limitations": ["Limitations of methodology"]
+        },
+        "context": {
+          "country": "Country or countries studied",
+          "time_period": "When the study was conducted",
+          "setting": "Context or setting of the study",
+          "political_context": "Relevant political context"
+        },
+        "funding": {
+          "source": "Source of funding",
+          "potential_biases": "Potential biases from funding"
+        }
+      }
+    ],
+    "synthesis": {
+      "narrative_synthesis": "Overall narrative integration of findings",
+      "consistency": {
+        "overall_consistency": "How consistent findings are across studies",
+        "inconsistencies": [
+          {
+            "inconsistency": "Description of inconsistency",
+            "possible_explanations": ["Potential explanations for inconsistency"]
+          }
+        ]
+      },
+      "effect_sizes": {
+        "typical_effects": "Summary of typical effect sizes found",
+        "heterogeneity": "How much effect sizes vary",
+        "outliers": ["Studies with unusually different results"]
+      },
+      "moderators": [
+        {
+          "moderator": "Factor that moderates effects",
+          "effect": "How this factor changes outcomes",
+          "evidence": "Evidence for this moderating effect"
+        }
+      ],
+      "subgroup_analyses": [
+        {
+          "subgroup": "Population or context subgroup",
+          "differential_effects": "How effects differ for this subgroup"
+        }
+      ]
+    },
+    "strength_of_evidence": {
+      "overall_grade": "A/B/C/D/I",
+      "grade_description": {
+        "A": "High confidence in effect estimate",
+        "B": "Moderate confidence in effect estimate",
+        "C": "Low confidence in effect estimate",
+        "D": "Very low confidence in effect estimate",
+        "I": "Insufficient evidence to judge"
+      },
+      "confidence_assessment": "Narrative assessment of confidence levels",
+      "key_strengths": ["Major strengths of evidence base"],
+      "key_limitations": ["Major limitations of evidence base"],
+      "research_gaps": ["Significant gaps in the research"]
+    },
+    "evidence_gaps": {
+      "population_gaps": [
+        "Populations not adequately studied"
+      ],
+      "intervention_gaps": [
+        "Intervention variations not adequately studied"
+      ],
+      "outcome_gaps": [
+        "Important outcomes not adequately measured"
+      ],
+      "context_gaps": [
+        "Contexts not adequately represented"
+      ],
+      "method_gaps": [
+        "Study types or methods missing from evidence base"
+      ],
+      "temporal_gaps": [
+        "Time periods not well covered"
+      ]
+    },
+    "bias_assessment": {
+      "publication_bias": "Assessment of publication bias",
+      "selection_bias": "Potential selection biases in evidence",
+      "reporting_bias": "Potential reporting biases",
+      "funding_bias": "Potential biases from funding sources",
+      "mitigation": ["How biases were addressed or mitigated"]
+    },
+    "policy_implications": {
+      "confidence_levels": [
+        {
+          "finding": "Specific policy-relevant finding",
+          "confidence": "High/Moderate/Low confidence in this finding",
+          "policy_relevance": "Why this matters for policy"
+        }
+      ],
+      "practical_guidance": "What policymakers should do based on evidence",
+      "uncertainties": [
+        "Key uncertainties that limit policy conclusions"
+      ],
+      "contextual_considerations": [
+        "Contextual factors that affect applicability of findings"
+      ],
+      "implementation_considerations": [
+        "Implementation considerations based on evidence"
+      ]
+    },
+    "future_research_needs": {
+      "priority_gaps": [
+        "Most important research gaps to fill"
+      ],
+      "methodological_improvements": [
+        "Methodological improvements needed"
+      ],
+      "data_needs": [
+        "Data collection needs"
+      ],
+      "evaluation_opportunities": [
+        "Opportunities for policy evaluation"
+      ]
+    }
+  },
+  "output_requirements": {
+    "required_sections": [
+      "evidence_question",
+      "search_strategy",
+      "studies_included",
+      "synthesis",
+      "strength_of_evidence"
+    ],
+    "optional_sections": [
+      "evidence_gaps",
+      "bias_assessment",
+      "policy_implications",
+      "future_research_needs"
+    ],
+    "quality_checks": [
+      "Search strategy is systematic and documented",
+      "Study quality is assessed consistently",
+      "Synthesis acknowledges heterogeneity",
+      "Limitations are explicitly stated",
+      "Policy implications match evidence strength",
+      "No cherry-picking of supportive studies"
+    ]
+  }
+}

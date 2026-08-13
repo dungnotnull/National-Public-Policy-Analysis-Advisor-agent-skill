@@ -1,0 +1,123 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Policy Analysis Output Schema",
+  "description": "Schema for validating outputs from the Public Policy Analysis Advisor skill",
+  "type": "object",
+  "required": ["request_id", "status", "result", "disclaimer_included"],
+  "properties": {
+    "request_id": {
+      "type": "string",
+      "description": "Unique identifier for the analysis request"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["success", "partial", "error"],
+      "description": "Status of the analysis"
+    },
+    "result": {
+      "type": "object",
+      "properties": {
+        "analysis": {
+          "type": "object",
+          "description": "Main analysis output",
+          "properties": {
+            "problem_definition": {
+              "type": "object",
+              "description": "Problem definition analysis"
+            },
+            "stakeholder_analysis": {
+              "type": "object",
+              "description": "Stakeholder analysis"
+            },
+            "alternatives_evaluation": {
+              "type": "object",
+              "description": "Policy alternatives evaluation"
+            },
+            "evidence_synthesis": {
+              "type": "object",
+              "description": "Evidence synthesis"
+            },
+            "policy_cycle": {
+              "type": "object",
+              "description": "Policy cycle analysis"
+            },
+            "recommendations": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "Policy recommendations"
+            }
+          }
+        },
+        "metadata": {
+          "type": "object",
+          "properties": {
+            "frameworks_used": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "Frameworks applied in analysis"
+            },
+            "confidence_level": {
+              "type": "string",
+              "enum": ["High", "Moderate", "Low"],
+              "description": "Overall confidence in analysis"
+            },
+            "data_quality": {
+              "type": "string",
+              "enum": ["High", "Medium", "Low"],
+              "description": "Quality of underlying data"
+            },
+            "evidence_sources": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "Key evidence sources consulted"
+            },
+            "limitations": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "Analysis limitations"
+            }
+          }
+        },
+        "disclaimer_required": {
+          "type": "boolean",
+          "description": "Whether disclaimer is required (always true for this skill)"
+        }
+      }
+    },
+    "disclaimer_included": {
+      "type": "boolean",
+      "description": "Whether the mandatory disclaimer was included"
+    },
+    "errors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "description": "Error code"
+          },
+          "message": {
+            "type": "string",
+            "description": "Error message"
+          },
+          "field": {
+            "type": "string",
+            "description": "Field that caused the error"
+          }
+        }
+      },
+      "description": "List of errors if status is 'error' or 'partial'"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp of analysis completion"
+    },
+    "version": {
+      "type": "string",
+      "description": "Skill version used for analysis"
+    }
+  },
+  "additionalProperties": false
+}

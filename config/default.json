@@ -1,0 +1,89 @@
+{
+  "skill_metadata": {
+    "name": "public-policy-analysis-advisor",
+    "version": "1.0.0",
+    "description": "Structured, rigorous public policy analysis using established frameworks from policy research and practice. Supports researchers, students, and civil servants in analyzing policy through problem definition, stakeholder mapping, alternatives evaluation, evidence synthesis, and policy cycle analysis.",
+    "author": "Policy Analysis Skill Development Team",
+    "license": "MIT"
+  },
+  "execution": {
+    "timeout": 30000,
+    "retries": {
+      "max_attempts": 3,
+      "backoff_strategy": "exponential",
+      "initial_delay": 1000
+    },
+    "memory_limit": "512MB",
+    "parallel_execution": true
+  },
+  "quality_standards": {
+    "min_quality_score": 0.7,
+    "required_frameworks": [
+      "problem_definition",
+      "stakeholder_analysis",
+      "alternatives_evaluation",
+      "evidence_synthesis",
+      "policy_cycle"
+    ],
+    "evidence_requirements": {
+      "min_sources": 3,
+      "source_types": ["academic", "government", "think_tank", "international"],
+      "recency_years": 10
+    },
+    "output_standards": {
+      "require_disclaimer": true,
+      "require_balanced_perspectives": true,
+      "require_uncertainty_acknowledgment": true,
+      "min_alternatives": 3
+    }
+  },
+  "feature_flags": {
+    "enable_experimental_features": false,
+    "enable_advanced_analytics": false,
+    "enable_ml_enhancements": false,
+    "enable_real_time_data": false
+  },
+  "logging": {
+    "level": "info",
+    "include_timestamps": true,
+    "include_stack_traces": false,
+    "log_execution_time": true
+  },
+  "validation": {
+    "strict_input_validation": true,
+    "strict_output_validation": true,
+    "allow_partial_results": true,
+    "fallback_on_error": true
+  },
+  "customization": {
+    "country_specific_defaults": {
+      "US": {
+        "federal_focus": true,
+        "state_consideration": true
+      },
+      "CA": {
+        "federal_focus": true,
+        "provincial_consideration": true
+      },
+      "EU": {
+        "supranational_focus": true,
+        "member_state_consideration": true
+      }
+    },
+    "domain_specific_defaults": {
+      "environmental_policy": {
+        "emphasis_scientific_evidence": true,
+        "consider_long_term_effects": true
+      },
+      "economic_policy": {
+        "emphasis_cost_benefit": true,
+        "consider_market_effects": true
+      },
+      "social_policy": {
+        "emphasis_distributional_effects": true,
+        "consider_vulnerable_populations": true
+      }
+    },
+    "language": "en"
+  }
+}
